@@ -10,7 +10,7 @@
    String repo = (String) request.getAttribute("repo");
    String galleryId = (String) request.getAttribute("galleryId");
    if (locale == null) {
-       locale = "en";
+       locale = "zh_CN";
    }
 
 %>
@@ -20,7 +20,7 @@
     <meta HTTP-EQUIV="pragma" CONTENT="no-cache"/>
     <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"/>
     <meta HTTP-EQUIV="expires" CONTENT="0"/>
-    <title>MIT App Inventor</title>
+    <title>MIT App Inventor(蓝趣)</title>
   </head>
 <body>
   <center>
@@ -70,24 +70,12 @@ out.println("<center><font color=red><b>" + error + "</b></font></center><br/>")
                            .add("galleryId", galleryId)
                            .add("redirect", redirect).build() %>"  style="text-decoration:none;" >中文</a>&nbsp;
 <a href="<%= new UriBuilder("/login")
-                           .add("locale", "pt")
-                           .add("repo", repo)
-                           .add("galleryId", galleryId)
-                           .add("redirect", redirect).build() %>"  style="text-decoration:none;" >Português</a>&nbsp;
-<a href="<%= new UriBuilder("/login")
                    .add("locale", "en")
                    .add("repo", repo)
                    .add("galleryId", galleryId)
                    .add("redirect", redirect).build() %>"  style="text-decoration:none;" >English</a></center>
 <p></p>
 <center>
-<%    if (locale != null && locale.equals("zh_CN")) { %>
-<a href="http://www.weibo.com/mitappinventor" target="_blank"><img class="img-scale"
-                  src="/static/images/mzl.png" width="30" height="30" title="Sina WeiBo"></a>&nbsp;
-<%    } %>
-<a href="http://www.appinventor.mit.edu" target="_blank"><img class="img-scale"
-                src="/static/images/login-app-inventor.jpg" width="50" height="30" title="MIT App Inventor"></a></center>
-<p></p>
 
 <p style="text-align: center; clear:both;"><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"
                                               target="_blank"><img alt="Creative Commons License" src="/static/images/cc3.png"></a> <br>
